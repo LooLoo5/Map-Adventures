@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 16200174c931cff72adcd4bfdf6bf7a9cc6e2b43
 # TalkNerdytoMe
 # ProjectThree
 
@@ -17,4 +20,8 @@ Technologies:
   -material UI
   -Babel
   -gatsby-cli
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 16200174c931cff72adcd4bfdf6bf7a9cc6e2b43
