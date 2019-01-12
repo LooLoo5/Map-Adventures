@@ -4,8 +4,12 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.8.3",
+    "@material-ui/icons": "^3.0.2",
+    "@material-ui/styles": "^3.0.0-alpha.7",
     "babel": "^6.23.0",
+    "express": "^4.16.4",
     "gatsby-cli": "^2.4.8",
+    "markdown-to-jsx": "^6.9.0",
     "mongodb": "^3.1.10",
     "prettier": "^1.15.3",
     "react": "^16.7.0",
