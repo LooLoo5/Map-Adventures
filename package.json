@@ -27,6 +27,7 @@
     "elemental": "^0.6.1",
     "enzyme": "^3.8.0",
     "express": "^4.16.3",
+    "heroku": "^7.19.4",
     "heroku-cli": "^7.0.9",
     "if-env": "^1.0.4",
     "mongodb": "^3.1.12",

@@ -22,16 +22,16 @@ export default class Nav extends React.Component {
       <div>
         <Nav tabs>
           <NavItem>
-            <NavLink href="#" active>Link</NavLink>
+            <NavLink className="text-success" href="#" active>Link</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Link</NavLink>
+            <NavLink className="text-success" href="#">Link</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Link</NavLink>
+            <NavLink className="text-success" href="#">Link</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Link</NavLink>
+            <NavLink className="text-success" href="#">Link</NavLink>
           </NavItem>
         </Nav>
       </div>
