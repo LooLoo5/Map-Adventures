@@ -1,8 +1,8 @@
 import React from 'react';
-import { Row, Col } from 'reactstrap';
+import {Container, Row, Col } from 'reactstrap';
 
 
-export default class Container extends React.Component {
+export default class Column extends React.Component {
   render() {
     return (
       <Container>
