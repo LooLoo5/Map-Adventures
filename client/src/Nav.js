@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavItem, NavLink } from 'reactstrap';
+import { Nav, NavItem, NavLink } from 'reactstrap';
 
-export default class Nav extends React.Component {
+export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
 
