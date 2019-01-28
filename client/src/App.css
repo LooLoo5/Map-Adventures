@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #581390;
+  background-color: #c7d1f1;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,4 +8,13 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #433f46;
+}
+
+.Go {
+  width: -webkit-fill-available;
+}
+
+.Jumbotron {
+  padding: unset;
+  min-width: 576px;
 }
