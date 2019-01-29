@@ -1,31 +1,31 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-import  Jumbotron from "./component/Jumbotron";
-import Form from "./component/Form";
-import Post from "./component/Post";
-import About from "./component/About";
-import Map from "./component/Map";
+
+import Navbar from "./component/Navbar"
+import Feed from "./pages/Feed";
+import About from "./pages/About";
+import Map from "./pages/Map";
 
 
-class App extends Component {
-  render() {
+function App() {
 
-    return (
-      <div className="App">
-      <Router/>
-      <Route path="/" exact component={App} />
-      <Route path="/about/" component={About} />
-      <Route path="/users/" component={Map} />
-      <About/>
-      <Map/>
-      <Jumbotron/>
-      <Form/>
-      <Post/>
+  return (
+
+    
+    <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Feed} />
+          <Route path="/about" component={About} />
+          <Route path="/map" component={Map} />
+        </Switch>
       </div>
-    );
-  }
+    </Router>
+  );
+
 }
 
 export default App;
