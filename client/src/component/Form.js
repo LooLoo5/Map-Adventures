@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Col, Button, ButtonGroup, Form, FormGroup, Label, Input } from 'reactstrap';
 
 
-export default class props extends Component {
+export default class FormClass extends Component {
+
   state = {
     Name: "",
     Team: "",
@@ -18,7 +19,13 @@ export default class props extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    this.props.submitHandler(this.state.Message);
+    this.props.submitHandler(this.state);
+  };
+
+  handleTeam = event => {
+    event.preventDefault();
+    this.setState({Team: event.target.name});
+    
   };
 
   render() {
@@ -32,14 +39,11 @@ export default class props extends Component {
             </Col>
           </FormGroup>
           <FormGroup row>
-            <Label for="exampleSelect" className="text-primary" sm={2}>Team</Label>
-            <Col sm={10}>
-              <Input type="select" onChange={this.handleInputChange} name="Team" >
-                <option>Mystic</option>
-                <option>Valor</option>
-                <option>Instinct</option>
-              </Input>
-            </Col>
+            <ButtonGroup>
+              <Button color="primary" onClick={this.handleTeam} name="Mystic" >Mystic</Button>
+              <Button color="danger"  onClick={this.handleTeam} name="Valor" >Valor</Button>
+              <Button color="warning" onClick={this.handleTeam} name="Instinct" >Instinct</Button>
+            </ButtonGroup>
           </FormGroup>
           <FormGroup row>
             <Label for="exampleText" className="text-primary" sm={2}>Text Area</Label>
