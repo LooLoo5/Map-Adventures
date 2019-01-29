@@ -1,7 +1,7 @@
 import React from "react";
 import { Jumbotron } from 'reactstrap';
-import Go from "./Go.jpg";
-import "./App.css";
+import Go from "./../Go.jpg";
+import "./../App.css";
 
 export default class Tron extends React.Component {
 render() {
