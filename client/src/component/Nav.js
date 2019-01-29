@@ -1,26 +1,32 @@
 import React from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap';
-import "./../App.css"
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import App from '../App';
+import About from './Map';
 
 
-
-export default class NavBar extends React.Component {
+export default class This extends React.Component {
 
   render() {
     return (
+    <Router>
       <div className="container">
           <Nav tabs>
             <NavItem>
-              <NavLink href="/" className="text-primary">Home</NavLink>
+              <NavLink to="/" className="text-primary" active>Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/About" className="text-primary">About</NavLink>
+              <NavLink to="/About" className="text-primary">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/Map" className="text-primary">Map</NavLink>
+              <NavLink to="/Map" className="text-primary">Map</NavLink>
             </NavItem>
           </Nav>
+          <Route path="/" exact component={App} />
+        <Route path="/about/" component={About} />
+      <Route path="/users/" component={Map} />
       </div>
+      </Router>
       )
     }
   }
