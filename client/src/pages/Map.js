@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import GoogleMapReact from 'google-map-react';
+import ReactGoogleMap from 'react-google-maps';
 import Raid from "../component/Raid";
 
 class Map extends Component {
@@ -15,7 +15,7 @@ class Map extends Component {
     return (
 
       <div style={{ height: '100vh', width: '100%' }}>
-        <GoogleMapReact
+        <ReactGoogleMap
           bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_KEY }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
@@ -29,7 +29,7 @@ class Map extends Component {
             lng={-95.3}
           />
 
-        </GoogleMapReact>
+        </ReactGoogleMap>
       </div>
     );
   }
