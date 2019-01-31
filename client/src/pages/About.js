@@ -1,9 +1,15 @@
 import React from "react";
+import Deck from "../component/Deck";
+import Footer from "../component/Footer";
 
-function About(){
-  return(
-    <div>About!!!!!</div>
-  );
+
+export default class About extends React.Component{
+  render() {
+    return (
+      <div className="container">
+      <Deck/>
+      <Footer/>
+      </div>
+    )
+  }
 }
-
-export default About;

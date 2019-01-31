@@ -11,10 +11,17 @@
 }
 
 .Go {
-  width: -webkit-fill-available;
+  width: 1000px;
+  height: 576px;
 }
 
 .Jumbotron {
-  padding: unset;
+  padding: 1000px;
   min-width: 576px;
+}
+
+#main-image {
+  background-image: url("./images/Go.png");
+  height: 576px;
+  background-size: cover;
 }

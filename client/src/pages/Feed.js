@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Post from "../component/Post";
 import Form from "../component/Form";
 import Tron from "../component/Jumbotron";
+import Footer from "../component/Footer";
 
 class Feed extends Component {
 
@@ -24,6 +25,7 @@ class Feed extends Component {
           {this.state.posts.map((e, i) => <Post key={i} {...e} />)}
 
         </div>
+        <Footer/>
       </div>
     );
   }

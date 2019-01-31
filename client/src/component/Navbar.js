@@ -4,7 +4,7 @@ import { Nav, NavItem, NavLink } from 'reactstrap';
 
 function Navbar() {
   return (
-
+    <div className="container">
       <Nav tabs>
         <NavItem>
           <NavLink href="/" className="text-primary">Home</NavLink>
@@ -16,7 +16,7 @@ function Navbar() {
           <NavLink href="/map" className="text-primary">Map</NavLink>
         </NavItem>
       </Nav>
-
+    </div>
   );
 
 
