@@ -8,7 +8,7 @@ export default class Post extends Component {
 
   render() {
     return (
-      <div className="container" >
+      <div className="container" id="post" >
         <p>{this.props.Name}</p>
         <p>{this.props.Team}</p>
         <p>{this.props.Message}</p>

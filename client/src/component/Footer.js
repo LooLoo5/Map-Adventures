@@ -1,16 +1,19 @@
 import React from "react";
+// import { Jumbotron } from 'reactstrap';
+// import Go from "../images/Go.png";
+import "../App.css";
 
+function Footer() {
 
-export default class Footer extends  React.Component{
-    render() {
-        return(
+  return (
+    <div className="container-fluid" id="footer">
+      {/* <Jumbotron className="Jumbotron">
+        <img src={Go} className="Go" alt="Go"></img>
+      </Jumbotron> */}
+      
+     </div>
+  )
 
-<div class="card w-75" className="container">
-  <div class="card-body">
-    <h5 class="card-title"> </h5>
-    <p class="card-text"> </p>
-  </div>
-</div>
-        )
-    }
 }
+
+export default Footer;
