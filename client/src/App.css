@@ -25,3 +25,37 @@
   height: 576px;
   background-size: cover;
 }
+
+#Form {
+  margin: 100px
+}
+
+#about-image {
+  background-image: url("./images/Teams.png");
+  height: 450px;
+  width: 1000px;
+}
+
+.words {
+  margin: 100px;
+  padding-top: 25px;
+}
+
+.teams {
+  height: auto;
+  width: auto;
+  margin: 100px;
+  
+}
+
+.valor {
+  height: auto;
+}
+
+.mystic {
+  height: auto;
+}
+
+.instinct {
+  height: auto;
+}
