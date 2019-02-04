@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Project Three",
   "main": "server.js",
-  "repository": "git@github.com:LooLoo5/TalkNerdytoMe.git",
+  "repository": "https://github.com/LooLoo5/Map-Adventures.git",
   "author": "Emily and Jason",
   "license": "MIT",
   "scripts": {
