@@ -112,7 +112,7 @@ class Map extends Component {
     axios.get("/api/gyms")
       .then(res => {
         this.setState({ gyms: res.data },
-          () => loadScript(`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_KEY}&callback=initMap`));
+          () => loadScript(`https://maps.googleapis.com/maps/api/js?key=AIzaSyBdwQv-pTAALJXxShEhd3UwS2zQ_UmBBHs&callback=initMap`));
       });
   }
 
