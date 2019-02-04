@@ -21,7 +21,9 @@ class Map extends Component {
     lngClicked: null,
     showInput: false,
     currentLat: null,
-    currentLng: null
+    currentLng: null,
+    gyms: [],
+    raids: []
   };
 
   // let locationUpdater = navigator.geolocation.watchPosition((position) => {console.log(position);});
@@ -41,14 +43,14 @@ class Map extends Component {
     raidImg.src = raidIcon;
     raidImg.style.width = '50px';
     raidImg.addEventListener('click', () => {
-      this.handleRaid();
+      this.handleRaidBtn();
     });
 
     let gymImg = document.createElement("img");
     gymImg.src = gymIcon;
     gymImg.style.width = '50px';
     gymImg.addEventListener('click', () => {
-      this.handleGym();
+      this.handleGymBtn();
     });
 
     controlDiv.appendChild(raidImg);
@@ -57,7 +59,7 @@ class Map extends Component {
     map.controls[window.google.maps.ControlPosition.RIGHT_TOP].push(controlDiv);
     //CONTROLS========================
 
-    map.addListener('click', (event) =>{
+    map.addListener('click', (event) => {
       this.setState({ latClicked: event.latLng.lat() });
       this.setState({ lngClicked: event.latLng.lng() });
       gymWindow.setPosition(event.latLng)
@@ -82,29 +84,61 @@ class Map extends Component {
     });
     //INFOWINDOW================
 
+
+    // render gym icons===============
+    this.state.gyms.map(e => {
+      var marker = new window.google.maps.Marker({
+        position: new window.google.maps.LatLng(e.lat, e.lng),
+        icon: {
+          url: gymIcon,
+          scaledSize: new window.google.maps.Size(24, 24),
+          anchor: new window.google.maps.Point(12, 12)
+        },
+        map: map
+      });
+    });
+
+
   };
 
 
 
 
   componentDidMount() {
-    navigator.geolocation.getCurrentPosition(position => this.setState({ currentLat: position.coords.latitude, currentLng: position.coords.longitude },
-      () => loadScript(`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_KEY}&callback=initMap`)));
+    navigator.geolocation.getCurrentPosition(position => this.setState({ currentLat: position.coords.latitude, currentLng: position.coords.longitude }));
+
     window.initMap = this.initMap;
+
+    axios.get("/api/gyms")
+      .then(res => {
+        this.setState({ gyms: res.data },
+          () => loadScript(`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_KEY}&callback=initMap`));
+      });
   }
 
-  handleRaid = () => {
+  handleRaidBtn = () => {
     console.log("handleraid");
     this.setState({ raidBtn: !this.state.raidBtn });
   };
-  handleGym = () => {
+  handleGymBtn = () => {
     console.log("handlegym");
+    this.setState({ gymBtn: !this.state.gymBtn });
+
   };
   handleAddGym = (name) => {
     console.log(name);
-    console.log(this.state.latClicked);
-    console.log(this.state.lngClicked);
-    // axios.get("/api/")
+    let data = {
+      name: name,
+      lat: this.state.latClicked,
+      lng: this.state.lngClicked
+    }
+
+    axios.post("/api/gyms", data)
+      .then(res => {
+        this.setState({
+          gyms: [...this.state.gyms, res.data]
+        });
+      });
 
   };
 
