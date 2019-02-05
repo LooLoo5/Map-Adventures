@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardImg, CardTitle, CardText, CardGroup, CardBody } from 'reactstrap';
+import { Card, CardImg, CardTitle, CardGroup, CardBody } from 'reactstrap';
 import Valor from "../images/Valor.jpg";
 import Mystic from "../images/Mystic.jpg";
 import Instinct from "../images/Instinct.jpg";
