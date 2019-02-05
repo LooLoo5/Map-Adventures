@@ -5,10 +5,10 @@ const gymSchema = new Schema({
   name: String,
   lat: Number,
   lng: Number,
-  raid: {
-    type: Schema.Types.ObjectId,
-    ref: "Raid"
-  },
+//   raid: {
+//     type: Schema.Types.ObjectId,
+//     ref: "Raid"
+//   },
 });
 
 const Gym = mongoose.model("Gym", gymSchema);

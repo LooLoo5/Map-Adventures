@@ -3,10 +3,12 @@ const Schema = mongoose.Schema;
 
 const raidSchema = new Schema({
   pokemon: String,
-  level: Number,
+  level: String,
   hatched: Boolean,
-  timeLeft: Number,
-  raiders: Number,
+  timeLeft: String,
+  lat:Number,
+  lng:Number,
+//   raiders: Number,
 });
 
 const Raid = mongoose.model("Raid", raidSchema);

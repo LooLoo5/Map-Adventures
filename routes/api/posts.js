@@ -2,9 +2,8 @@ const router = require("express").Router();
 const controller = require("../../controllers/controller");
 
 router.route("/")
-  .get(controller.getRaids)
-  .post(controller.createRaid);
-
+  .get(controller.getPosts)
+  .post(controller.createPost);
 
 // router
 //   .route("/:id")
