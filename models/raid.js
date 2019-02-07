@@ -5,7 +5,7 @@ const raidSchema = new Schema({
   pokemon: String,
   level: String,
   hatched: Boolean,
-  timeLeft: String,
+  timeLeft: Number,
   lat:Number,
   lng:Number,
 //   raiders: Number,

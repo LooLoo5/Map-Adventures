@@ -1,5 +1,7 @@
 module.exports = {
   Gym: require("./gym"),
   Raid: require("./raid"),
-  Post: require("./post")
+  Post: require("./post"),
+  Stop: require("./stop"),
+
 };
